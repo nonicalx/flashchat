@@ -19,8 +19,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         AnimationController(duration: Duration(seconds: 2), vsync: this);
     controller.forward();
 
-    animation =
-        ColorTween(begin: Colors.red, end: Colors.white).animate(controller);
+    animation = ColorTween(begin: Colors.grey[300], end: Colors.white)
+        .animate(controller);
 
     controller.addListener(() {
       setState(() {});
@@ -58,6 +58,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   text: ['Flash Chat'],
                   textStyle: TextStyle(
                     fontSize: 45.0,
+                    color: Colors.black54,
                     fontWeight: FontWeight.w900,
                   ),
                 ),
